@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.container {
+    background-color: #fff;
+    padding: 40px; /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 600px; /* Increased width */
+    transition: background-color 0.3s, color 0.3s;
+}
+h1 {
+    font-size: 48px; /* Increased font size */
+    color: #333;
+    margin-bottom: 30px; /* Increased margin */
+    transition: color 0.3s;
+}
+input {
+    width: 100%;
+    padding: 20px; /* Increased padding */
+    margin-bottom: 30px; /* Increased margin */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px; /* Increased font size */
+}
+button {
+    width: 100%;
+    padding: 20px; /* Increased padding */
+    background-color: #0A5EB0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px; /* Increased font size */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0068e9;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px; /* Increased margin */
+}
+.toggle {
+    position: relative;
+    width: 120px; /* Increased width */
+    height: 60px; /* Increased height */
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.toggle::before {
+    content: '';
+    position: absolute;
+    width: 52px; /* Increased width */
+    height: 52px; /* Increased height */
+    background-color: white; /* Default circle color */
+    border-radius: 50%;
+    top: 4px; /* Adjusted for increased size */
+    left: 4px; /* Adjusted for increased size */
+    transition: transform 0.3s, background-color 0.3s; /* Added transition for background color */
+}
+body.dark .toggle {
+    background-color: #6200EE;
+}
+body.dark .toggle::before {
+    background-color: black; /* Change the circle color to black in dark mode */
+    transform: translateX(60px); /* Adjusted for increased size */
+}
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+body.dark .container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+body.dark h1 {
+    color: #ffffff;
+}
+body.dark input {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+body.dark button {
+    background-color: #3700B3;
+}
+body.dark button:hover {
+    background-color: #6200EE;
+}
